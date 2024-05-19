@@ -1,0 +1,125 @@
+FCFS (First Come, First Served) Scheduling Program created by to determine the
+ average waiting time and average turnaround time given n processes and their burst times.
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+1. Enter all the processes and their burst time.
+2. Find waiting time, WT of all the processes.
+3. Enter a job name 
+4. Enter job arrival time
+5. Enter job P.U time
+
+	auto create Gantt Chart and Gantt Chart under auto adding job name 
+	and WT[i] = BT[i-1] + WT[i-1].
+
+6. For all the next processes i, WT[i] = BT[i-1] + WT[i-1].
+7. Calculate Turnaround time = WT + BT for all the processes.
+8. Calculate average waiting time = total waiting time/no. of processes.
+9. Calculate average turnaround time = total turnaround time/no. of processes.
+-----------------------------------------------------------------------------------------------------------------------
+
+
+________________________________________________________________________________________________________________________
+example:- calculate the turn around time and waiting time for all processes applying FCFS algorithem.
+---
+1. input job quantity-5 
+2. input job name in -5 time 
+3. input job arrival time -5 time
+4. input job P.U time -5 time
+5. otput = avrage time and waiting time 
+________________________________________________________________________________________________________________________
+
+
+
+-------INPUT----------
+-------------------------------
+Enter job quantity
+5
+-------------------------------
+________________________________________________________
+enter 1 job name
+a
+enter 1 job arrival time
+0
+enter 1 job au time
+9
+________________________________________________________
+________________________________________________________
+enter 2 job name
+b
+enter 2 job arrival time
+1
+enter 2 job au time
+5
+________________________________________________________
+________________________________________________________
+enter 3 job name
+c
+enter 3 job arrival time
+2
+enter 3 job au time
+2
+________________________________________________________
+________________________________________________________
+enter 4 job name
+d
+enter 4 job arrival time
+3
+enter 4 job au time
+6
+________________________________________________________
+________________________________________________________
+enter 5 job name
+e
+enter 5 job arrival time
+4
+enter 5 job au time
+8
+________________________________________________________
+________________________________________________________
+
+
+------------------OUTPUT--------------------------------
+________________________________________________________
+
+job name     =    a       b       c       d       e    
+arrival time =   0.00    1.00    2.00    3.00    4.00  
+job AU time  =   9.00    5.00    2.00    6.00    8.00  
+________________________________________________________
+
+Job PU Time Addition Value
+
+|____a___|____b___|____c___|____d___|____e___|
+0.00     9.00     14.00    16.00    22.00    30.00
+
+________________________________________________________
+
+    Exite Time     -    Entry Time    =   Turn Around Time
+       9.00        -       0.00       =   9.00
+       14.00       -       1.00       =   13.00
+       16.00       -       2.00       =   14.00
+       22.00       -       3.00       =   19.00
+       30.00       -       4.00       =   26.00
+________________________________________________________
+
+
+                                        --------------
+ Turn Around Time Addition is         =   81.00 / 5.00 = 16.20  
+                                        --------------
+
+
+________________________________________________________
+
+  Turn Around Time -      P.T.W.T     =   Waiting Time 
+       9.00        -       9.00       =   0.00
+       13.00       -       5.00       =   8.00
+       14.00       -       2.00       =   12.00
+       19.00       -       6.00       =   13.00
+       26.00       -       8.00       =   18.00
+________________________________________________________
+
+
+                                        --------------
+Avrage Waiting Time is                 = 51.00 / 5.00   = 10.20
+                                        --------------
